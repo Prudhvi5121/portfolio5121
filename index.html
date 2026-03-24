@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prudhvi | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@300&family=Noto+Sans+Devanagari:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        #hello-screen {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            opacity: 1;
+        }
+
+        /* ── Word container: clips the text as it "draws" in ── */
+        .word-wrap {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* clip starts fully closed (right side), opens left→right */
+            clip-path: inset(0 100% 0 0);
+            opacity: 0;
+            /* transition only used for fade-out; clip-path uses JS */
+        }
+
+        /* "Hello" — cursive SVG (original, already pen-drawn) */
+        #word-hello {
+            opacity: 0;
+        }
+        #word-hello svg {
+            height: 90px;
+        }
+        #word-hello svg path {
+            fill: none;
+            stroke: #fff;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 14.8883;
+        }
+
+        /* Text-based words */
+        .word-text {
+            font-weight: 300;
+            color: #fff;
+            white-space: nowrap;
+            line-height: 1;
+        }
+        .font-hola {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-style: italic;
+            font-size: 72px;
+            letter-spacing: 0.04em;
+        }
+        .font-telugu {
+            font-family: 'Noto Sans Telugu', sans-serif;
+            font-size: 64px;
+            letter-spacing: 0.02em;
+        }
+        .font-hindi {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 64px;
+            letter-spacing: 0.02em;
+        }
+
+        body.no-scroll { overflow: hidden; }
+    </style>
+</head>
+<body class="no-scroll">
+
+<div id="hello-screen">
+
+    <!-- ① Hello — original SVG cursive paths (strokeDashoffset draw) -->
+    <div id="word-hello">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 638 200">
+            <path id="p1" d="M8.69214 166.553C36.2393 151.239 61.3409 131.548 89.8191 98.0295C109.203 75.1488 119.625 49.0228 120.122 31.0026C120.37 17.6036 113.836 7.43883 101.759 7.43883C88.3598 7.43883 79.9231 17.6036 74.7122 40.9363C69.005 66.5793 64.7866 96.0036 54.1166 190.356"/>
+            <path id="p2" d="M55.1624 181.135C60.6251 133.114 81.4118 98.0479 107.963 98.0479C123.844 98.0479 133.937 110.703 131.071 128.817C129.457 139.487 127.587 150.405 125.408 163.06C122.869 178.941 130.128 191.348 152.122 191.348C184.197 191.348 219.189 173.523 237.097 145.915C243.198 136.509 245.68 128.073 245.928 119.884C246.176 104.996 237.739 93.8296 222.851 93.8296C203.992 93.8296 189.6 115.17 189.6 142.465C189.6 171.745 205.481 192.341 239.208 192.341C285.066 192.341 335.86 137.292 359.199 75.8585C365.788 58.513 368.26 42.4065 368.26 31.1512C368.26 17.8057 364.042 7.55823 352.131 7.55823C340.469 7.55823 332.777 16.6141 325.829 30.9129C317.688 47.4967 311.667 71.4162 309.203 98.4549C303 166.301 316.896 191.348 349.936 191.348C390 191.348 434.542 135.534 457.286 75.6686C463.803 58.513 466.275 42.4065 466.275 31.1512C466.275 17.8057 462.057 7.55823 450.146 7.55823C438.484 7.55823 430.792 16.6141 423.844 30.9129C415.703 47.4967 409.682 71.4162 407.218 98.4549C401.015 166.301 414.911 191.348 444.416 191.348C473.874 191.348 489.877 165.67 499.471 138.402C508.955 111.447 520.618 94.8221 544.935 94.8221C565.035 94.8221 580.916 109.71 580.916 137.75C580.916 168.768 560.792 192.093 535.362 192.341C512.984 192.589 498.285 174.475 499.774 147.179C501.511 116.907 519.873 94.8221 543.943 94.8221C557.839 94.8221 569.51 100.999 578.682 107.725C603.549 125.866 622.709 114.656 630.047 96.7186"/>
+        </svg>
+    </div>
+
+    <!-- ② Hola — clip-wipe draw -->
+    <div class="word-wrap" id="word-hola">
+        <span class="word-text font-hola">Hola</span>
+    </div>
+
+    <!-- ③ నమస్కారం — clip-wipe draw -->
+    <div class="word-wrap" id="word-telugu">
+        <span class="word-text font-telugu">నమస్కారం</span>
+    </div>
+
+    <!-- ④ नमस्ते — clip-wipe draw -->
+    <div class="word-wrap" id="word-hindi">
+        <span class="word-text font-hindi">नमस्ते</span>
+    </div>
+
+</div>
+
+<!-- ── PORTFOLIO ── -->
+<header>
+    <h2>Prudhvi... <span class="verified-badge black"></span></h2>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact Me</a>
+        <a href="https://drive.google.com/file/d/1AM8LSOKhlg4HkHuv_3UdwrkMSOpqKvC-/view" target="_blank" class="resume">View CV</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="image"><img src="profile.png" alt="Profile Picture"></div>
+    <div class="content">
+        <h1>Prudhvi | 21, Andhra Pradesh, Bharat
+            <img src="https://flagcdn.com/w40/in.png" class="flag">
+            <span class="verified-badge black"></span>
+        </h1>
+        <p>Software Engineer | Cybersecurity</p>
+        <p id="datetime" style="margin-top:10px; font-size:16px; color:#bcbcbc;"></p>
+</section>
+
+<section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-box">
+    <p>
+        I’m <strong>Prudhvi</strong>, a Computer Science student and aspiring Software Engineer focused on backend development and problem solving. 
+        I work with Java, Python, and Data Structures & Algorithms, and enjoy building scalable applications while continuously improving my skills.
+    </p>
+</div>
+</section>
+
+<section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+        
+        <div class="project-card">
+            <h3>Resource Allocation System</h3>
+            <span class="tech">Java</span>
+            <p>Java Swing application that manages processes and displays CPU and memory usage in real time. Implemented add, remove, and optimize process features using core Java concepts.</p>
+            <a href="https://github.com/prudhvi5121" target="_blank">
+                GitHub <i class="fa-brands fa-github" style="margin-left:6px;"></i>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h3>AI Network Assistant</h3>
+            <span class="tech">HTML • CSS • JavaScript</span>
+            <p>Web-based networking assistant to help users troubleshoot network issues like DNS problems, Wi-Fi issues, and general connectivity errors.</p>
+            <a href="https://github.com/prudhvi5121" target="_blank">
+                GitHub <i class="fa-brands fa-github" style="margin-left:6px;"></i>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h3>Responsive Website Development</h3>
+            <span class="tech">HTML • CSS • JavaScript</span>
+            <p>Designed a responsive food delivery website with clean UI, mobile-friendly layout, and interactive components.</p>
+            <a href="https://github.com/prudhvi5121" target="_blank">
+                GitHub <i class="fa-brands fa-github" style="margin-left:6px;"></i>
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h3>Student Portal System</h3>
+            <span class="tech">HTML • CSS • JavaScript • Backend</span>
+            <p>A web-based student portal system that manages student data, authentication, and academic information. Includes features like login system, dashboard, and efficient data handling for better user experience.</p>
+            <a href="https://github.com/Prudhvi5121/mystudent-portal-system" target="_blank">
+                GitHub <i class="fa-brands fa-github" style="margin-left:6px;"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+<section class="experience" id="experience">
+    <h2>Experience</h2>
+    <div class="about-box">
+        <p>
+            <strong>Training – Data Structures & Algorithms (Cipher Schools)</strong>
+        </p>
+
+        <p>
+            I learned and practiced Data Structures and Algorithms using Java, including Arrays, Linked Lists, Stacks, Queues, Trees, and Graphs.
+        </p>
+
+        <p>
+            I solved problems on recursion, dynamic programming, and greedy algorithms to improve my problem-solving and logical thinking skills.
+        </p>
+
+        <p>
+            <a href="https://www.cipherschools.com/certificate/preview?id=688356f6ca64e035786b1cd8" target="_blank">View Certificate</a>
+        </p>
+    </div>
+</section>
+
+<section class="skills" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-hover">
+        <div class="skill-item"><h3>Languages</h3><div class="skill-popup">Java, C++, Python, DSA</div></div>
+        <div class="skill-item"><h3>Frameworks</h3><div class="skill-popup">HTML, CSS, JavaScript</div></div>
+        <div class="skill-item"><h3>Tools</h3><div class="skill-popup">GitHub, LeetCode, CodeTantra, Neo Platform</div></div>
+        <div class="skill-item"><h3>Soft Skills</h3><div class="skill-popup">Problem Solving, Adaptability, Leadership</div></div>
+    </div>
+</section>
+
+<div id="lang" class="popup"><div class="popup-content"><a href="#skills" class="close">×</a><h3>Languages</h3><p>Java, C++, Python, DSA</p></div></div>
+<div id="frameworks" class="popup"><div class="popup-content"><a href="#skills" class="close">×</a><h3>Frameworks</h3><p>HTML, CSS, JavaScript</p></div></div>
+<div id="tools" class="popup"><div class="popup-content"><a href="#skills" class="close">×</a><h3>Tools</h3><p>GitHub, LeetCode, CodeTantra, Neo Platform</p></div></div>
+<div id="soft" class="popup"><div class="popup-content"><a href="#skills" class="close">×</a><h3>Soft Skills</h3><p>Problem Solving, Adaptability, Leadership</p></div></div>
+
+<section class="certifications" id="certifications">
+    <h2>Certifications</h2>
+    <div class="edu-box">
+        <p>Java Programming – IAM Neo | <a href="#" target="_blank">View Certificate</a></p>
+        <p>Cloud Computing – NPTEL | <a href="#" target="_blank">View Certificate</a></p>
+        <p>Data Structures & Algorithms – IAM Neo | <a href="#" target="_blank">View Certificate</a></p>
+        <p>Responsive Web Design – freeCodeCamp | <a href="#" target="_blank">View Certificate</a></p>
+    </div>
+</section>
+
+<section class="education" id="education">
+    <h2>Education</h2>
+    <div class="edu-box">
+        <p><strong>B.Tech CSE</strong> – Lovely Professional University</p>
+        <p><strong>Intermediate</strong> – Sri Chaitanya Junior College (86.7%)</p>
+        <p><strong>SSC</strong> – Sri Chaitanya Techno School (100%)</p>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-box">
+        <p>Feel free to reach out for opportunities, projects, or collaboration.</p>
+        <div class="contact-info">
+            <p><i class="fa-solid fa-envelope"></i><a href="mailto:prudhvi51210@gmail.com">prudhvi51210@gmail.com</a></p>
+            <p><i class="fa-solid fa-phone"></i><a href="tel:+9163000724xx">+91 63000724xx</a></p>
+            <p><i class="fa-brands fa-github"></i><a href="https://github.com/prudhvi5121" target="_blank">github.com/prudhvi5121</a></p>
+            <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/venkata-prudhvi-5121ts/" target="_blank">linkedin.com/in/prudhvi</a></p>
+        </div>
+        
+        <!-- Bottom CV Buttons -->
+        <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center;">
+            <a href="https://drive.google.com/file/d/1AM8LSOKhlg4HkHuv_3UdwrkMSOpqKvC-/view" target="_blank" style="text-decoration: none; padding: 10px 20px; border: 1px solid currentColor; border-radius: 4px;">View CV</a>
+            <a href="https://drive.google.com/uc?export=download&id=1AM8LSOKhlg4HkHuv_3UdwrkMSOpqKvC-" target="_blank" style="text-decoration: none; padding: 10px 20px; border: 1px solid currentColor; border-radius: 4px;">Download CV</a>
+        </div>
+    </div>
+</section>
+
+
+<script>
+(function () {
+    const screen = document.getElementById('hello-screen');
+
+    /* ── Timing ── */
+    const DRAW_MS    = 1600;   // how long the wipe/draw takes
+    const HOLD_MS    = 700;    // hold after fully visible
+    const FADE_OUT   = 380;    // fade this word out
+    const GAP_MS     = 100;    // breath between words
+    const EASING     = 'cubic-bezier(0.33, 0, 0.10, 1)';
+    const FINAL_FADE = 700;
+
+    const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+    /* ── Word 1: Hello — original SVG strokeDashoffset draw ── */
+    async function drawHello() {
+        const wrap = document.getElementById('word-hello');
+        const p1   = document.getElementById('p1');
+        const p2   = document.getElementById('p2');
+
+        const len1 = p1.getTotalLength();
+        const len2 = p2.getTotalLength();
+        const total = len1 + len2;
+        const dur1 = Math.round((len1 / total) * DRAW_MS);
+        const dur2 = Math.round((len2 / total) * DRAW_MS);
+
+        // Reset paths
+        [{ el: p1, len: len1 }, { el: p2, len: len2 }].forEach(({ el, len }) => {
+            el.style.strokeDasharray  = len + 'px';
+            el.style.strokeDashoffset = len + 'px';
+            el.style.transition = 'none';
+        });
+
+        // Show the SVG container
+        wrap.style.opacity = '1';
+
+        // Draw p1
+        await sleep(60);
+        p1.style.transition = `stroke-dashoffset ${dur1}ms ${EASING}`;
+        p1.style.strokeDashoffset = '0px';
+
+        // Draw p2 right after p1 finishes
+        await sleep(dur1 + 80);
+        p2.style.transition = `stroke-dashoffset ${dur2}ms ${EASING}`;
+        p2.style.strokeDashoffset = '0px';
+
+        await sleep(dur2);
+    }
+
+    async function hideHello() {
+        const wrap = document.getElementById('word-hello');
+        wrap.style.transition = `opacity ${FADE_OUT}ms ease`;
+        wrap.style.opacity = '0';
+        await sleep(FADE_OUT + GAP_MS);
+    }
+
+    /* ── Words 2-4: clip-path wipe left→right (looks like pen writing) ── */
+    async function drawWipe(id) {
+        const el = document.getElementById(id);
+        // Make visible, clip fully closed
+        el.style.opacity = '1';
+        el.style.clipPath = 'inset(0 100% 0 0)';
+        el.style.transition = 'none';
+
+        await sleep(20);
+        // Open the clip left→right over DRAW_MS
+        el.style.transition = `clip-path ${DRAW_MS}ms ${EASING}`;
+        el.style.clipPath = 'inset(0 0% 0 0)';
+        await sleep(DRAW_MS);
+    }
+
+    async function hideWipe(id) {
+        const el = document.getElementById(id);
+        el.style.transition = `opacity ${FADE_OUT}ms ease`;
+        el.style.opacity = '0';
+        await sleep(FADE_OUT + GAP_MS);
+    }
+
+    /* ── Main sequence ── */
+async function run() {
+    await sleep(300);
+
+    // 1. నమస్కారం (Telugu)
+    await drawWipe('word-telugu');
+    await sleep(HOLD_MS);
+    await hideWipe('word-telugu');
+
+    // 2. नमस्ते (Hindi)
+    await drawWipe('word-hindi');
+    await sleep(HOLD_MS);
+    await hideWipe('word-hindi');
+
+    // 3. Hello (English - last)
+    await drawHello();
+    await sleep(HOLD_MS + 300);
+
+    // Fade out the whole screen
+    screen.style.transition = `opacity ${FINAL_FADE}ms cubic-bezier(0.4,0,0.2,1)`;
+    screen.style.opacity = '0';
+    screen.style.pointerEvents = 'none';
+
+    setTimeout(() => {
+        screen.style.display = 'none';
+        document.body.classList.remove('no-scroll');
+    }, FINAL_FADE + 50);
+}
+
+run();
+})();
+</script>
+<script>
+function updateDateTime() {
+    const now = new Date();
+
+    // Time
+    let hours = now.getHours().toString().padStart(2, '0');
+    let minutes = now.getMinutes().toString().padStart(2, '0');
+    let seconds = now.getSeconds().toString().padStart(2, '0');
+
+    // Date
+    let day = now.getDate().toString().padStart(2, '0');
+    let month = (now.getMonth() + 1).toString().padStart(2, '0');
+    let year = now.getFullYear();
+
+    document.getElementById("datetime").textContent =
+        day + "/" + month + "/" + year + "  |  " +
+        hours + ":" + minutes + ":" + seconds;
+}
+
+// Update every second
+setInterval(updateDateTime, 1000);
+
+// Run immediately
+updateDateTime();
+</script>
+<footer style="text-align:center; padding:20px; font-size:14px; color:#888;">
+    © 2026 Prudhvi. All rights reserved.
+</footer>
+</body>
+</html>
