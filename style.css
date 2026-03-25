@@ -6,30 +6,15 @@
     font-family: "Inter", "Segoe UI", sans-serif;
 }
 
-/* BASE (WORKS FOR BOTH PC + MOBILE) */
+/* DESKTOP ONLY */
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    min-width: 1200px;
     background: #0f0f0f;
     color: #eaeaea;
-}
-
-/* DESKTOP (LARGE SCREENS) */
-@media (min-width: 1024px) {
-    body {
-        padding: 0 40px;
-    }
-}
-
-/* MOBILE (SMALL SCREENS) */
-@media (max-width: 768px) {
-    body {
-        padding: 0 15px;
-    }
 }
 /* INTRO / WELCOME SCREEN */
 .intro {
