@@ -311,6 +311,19 @@ section h2 {
     color: #ffffff;
     text-decoration: none;
 }
+/* ================= CERTIFICATES ================= */
+
+.certificates a {
+    color: rgba(255, 255, 255, 0.85); /* light white */
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.certificates a:hover {
+    color: #ffffff; /* full white on hover */
+    text-decoration: underline;
+}
 
 /* ================= SMOOTH FADE ================= */
 .project-card,
@@ -594,4 +607,616 @@ section h2 {
     margin-top: 20px;
     color: #aaa;
     letter-spacing: 2px;
+}
+/* ================= CV BUTTONS ================= */
+
+.cv-btn {
+    color: rgba(255, 255, 255, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    background: transparent !important;
+    padding: 12px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.cv-btn:hover {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.08);
+}
+/* ================= CV BUTTONS ================= */
+
+.cv-btn {
+    text-decoration: none;
+    padding: 12px 28px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 8px;
+    color: rgba(255,255,255,0.85);
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    margin: 10px;
+    transition: 0.3s ease;
+}
+
+/* Hover */
+.cv-btn:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+    background: rgba(255,255,255,0.08);
+}
+/* ================= CERTIFICATE CARDS LINK FIX ================= */
+
+.project-card a,
+.edu-box a,
+.certificates a {
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.project-card a:hover,
+.edu-box a:hover,
+.certificates a:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+.project-card a {
+    position: relative;
+    text-decoration: none;
+}
+
+.project-card a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.7);
+}
+/* ================= CERTIFICATE CARDS LINK FIX ================= */
+
+.project-card a,
+.edu-box a,
+.certificates a {
+    color: rgba(255, 255, 255, 0.85) !important;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* Hover effect */
+.project-card a:hover,
+.edu-box a:hover,
+.certificates a:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+/* ================= CERTIFICATE LINKS UNDERLINE ================= */
+
+.project-card a,
+.certificates a {
+    color: rgba(255,255,255,0.85) !important;
+    text-decoration: underline !important;  /* ALWAYS underline */
+}
+
+/* Optional hover (clean highlight) */
+.project-card a:hover,
+.certificates a:hover {
+    color: #ffffff !important;
+}
+/* ================= ALL CERTIFICATE LINKS FIX ================= */
+
+/* Target ALL links inside cards/sections */
+.project-card a,
+.edu-box a,
+.certificates a,
+.contact-box a,
+.about-box a,
+.experience a {
+    color: rgba(255,255,255,0.85) !important;
+    text-decoration: underline !important;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+/* Hover */
+.project-card a:hover,
+.edu-box a:hover,
+.certificates a:hover,
+.contact-box a:hover,
+.about-box a:hover,
+.experience a:hover {
+    color: #ffffff !important;
+}
+
+/* Fix visited (purple issue) */
+.project-card a:visited,
+.edu-box a:visited,
+.certificates a:visited,
+.experience a:visited {
+    color: rgba(255,255,255,0.85) !important;
+}
+
+/* ================= REMOVE ALL LINES FROM PROJECT LINKS ================= */
+
+.project-card a {
+    text-decoration: none !important;   /* removes underline */
+    border: none !important;            /* removes any border */
+    border-bottom: none !important;     /* removes bottom line */
+}
+
+/* Hover also clean */
+.project-card a:hover {
+    text-decoration: none !important;
+    border: none !important;
+}
+/* ================= REMOVE LINES FROM CONTACT LINKS ================= */
+
+.contact-info a {
+    text-decoration: none !important;   /* remove underline */
+    border: none !important;            /* remove any border */
+}
+
+/* Hover clean */
+.contact-info a:hover {
+    text-decoration: none !important;
+}
+.skill-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-icons i {
+    font-size: 26px;
+    color: rgba(255,255,255,0.85);
+    transition: 0.3s;
+}
+
+/* Hover */
+.skill-icons i:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+}
+.fa-html5 { color: #e34c26; }
+.fa-css3-alt { color: #264de4; }
+.fa-js { color: #f0db4f; }
+.fa-python { color: #3776ab; }
+.fa-java { color: #f89820; }
+/* Hide icons initially */
+.skill-popup .icons {
+    display: none;
+}
+
+/* Style icons */
+.skill-popup .icons i {
+    font-size: 24px;
+    margin: 0 8px;
+    color: rgba(255,255,255,0.85);
+}
+.skill-popup span {
+    transition: 0.3s;
+}
+/* ================= LIGHT MODE ================= */
+
+.light-mode {
+    background: #ffffff;
+    color: #111111;
+}
+
+/* Sections */
+.light-mode .projects,
+.light-mode .about,
+.light-mode .education {
+    background: #f5f5f5;
+}
+
+/* Cards */
+.light-mode .project-card,
+.light-mode .about-box,
+.light-mode .contact-box,
+.light-mode .edu-box p,
+.light-mode .skills-box div {
+    background: #ffffff;
+    color: #111;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Text adjustments */
+.light-mode p,
+.light-mode .tech {
+    color: #444;
+}
+
+/* Links */
+.light-mode a {
+    color: #111;
+}
+
+/* Button style */
+#themeToggle {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: #222;
+    color: #fff;
+}
+
+/* Light mode button */
+.light-mode #themeToggle {
+    background: #ddd;
+    color: #000;
+}
+
+/* ================= FIX LIGHT MODE TEXT ================= */
+
+.light-mode {
+    background: #ffffff !important;
+    color: #111111 !important;
+}
+
+/* All headings */
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode h5,
+.light-mode h6 {
+    color: #000000 !important;
+}
+
+/* Paragraphs */
+.light-mode p {
+    color: #222222 !important;
+}
+
+/* Skills buttons */
+.light-mode .skill-item h3 {
+    background: #eeeeee !important;
+    color: #000 !important;
+}
+
+/* Cards */
+.light-mode .project-card,
+.light-mode .about-box,
+.light-mode .contact-box,
+.light-mode .edu-box p,
+.light-mode .skills-box div {
+    background: #ffffff !important;
+    color: #000 !important;
+}
+
+/* Links */
+.light-mode a {
+    color: #000 !important;
+}
+
+/* Skill popup text */
+.light-mode .skill-popup {
+    color: #000 !important;
+    background: #f5f5f5 !important;
+}
+body {
+    transition: 0.4s ease;
+}
+/* ================= HERO NAME FIX ================= */
+
+.light-mode .content h1 {
+    color: #000000 !important;   /* pure black */
+    -webkit-text-fill-color: #000000 !important; /* override gradient */
+    background: none !important; /* remove gradient */
+}
+/* ================= HEADER FIX (LIGHT MODE) ================= */
+
+.light-mode header {
+    background: #ffffff !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Logo / Name */
+.light-mode header h2 {
+    color: #000000 !important;
+}
+
+/* Nav links */
+.light-mode nav a {
+    color: #000000 !important;
+    opacity: 0.8;
+}
+
+.light-mode nav a:hover {
+    opacity: 1;
+}
+
+/* Resume button */
+.light-mode .resume {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+/* ================= CIRCLE THEME EFFECT ================= */
+
+.theme-circle {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+    z-index: 9999;
+    animation: circleExpand 0.7s ease-out forwards;
+}
+
+@keyframes circleExpand {
+    to {
+        transform: translate(-50%, -50%) scale(150);
+    }
+}
+
+/* ================= FIX SKILLS + CONTACT LIGHT MODE ================= */
+
+/* Skills section */
+.light-mode .skills {
+    background: #f5f5f5 !important;
+}
+
+/* Contact section */
+.light-mode .contact {
+    background: #f5f5f5 !important;
+}
+
+/* Contact box already white but fix text */
+.light-mode .contact-box {
+    background: #ffffff !important;
+    color: #000 !important;
+}
+/* ================= FULL LIGHT MODE TEXT FIX ================= */
+
+/* Headings */
+.light-mode h1,
+.light-mode h2,
+.light-mode h3 {
+    color: #000 !important;
+}
+
+/* Paragraphs */
+.light-mode p {
+    color: #333 !important;
+}
+
+/* Certifications text */
+.light-mode .project-card,
+.light-mode .project-card p {
+    color: #000 !important;
+}
+
+/* Contact text */
+.light-mode .contact-box {
+    color: #000 !important;
+}
+
+/* Skills popup (THIS WAS MAIN ISSUE) */
+.light-mode .skill-popup {
+    background: #ffffff !important;
+    color: #000 !important;
+}
+
+/* Skill icons */
+.light-mode .skill-popup i {
+    color: #000 !important;
+}
+
+/* Buttons (Languages, Tools etc) */
+.light-mode .skill-item h3 {
+    background: #eeeeee !important;
+    color: #000 !important;
+}
+
+/* Links */
+.light-mode a {
+    color: #000 !important;
+}
+/* Grid */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* Card */
+.project-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Image */
+.project-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+/* Overlay */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Title */
+.project-overlay h3 {
+    margin-bottom: 6px;
+}
+
+/* Description */
+.project-overlay p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Tags */
+.tags {
+    margin: 10px 0;
+}
+
+.tags span {
+    background: rgba(255,255,255,0.15);
+    padding: 4px 8px;
+    margin-right: 6px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+/* GitHub */
+.project-overlay a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    width: fit-content;
+}
+
+/* Hover Effects 🔥 */
+.project-card:hover img {
+    transform: scale(1.08);
+}
+
+.project-card:hover .project-overlay {
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.6),
+        rgba(0,0,0,0.1)
+    );
+}
+.project-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 260px; /* fixed height */
+}
+
+/* FIX IMAGE FIT */
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* fills card nicely */
+    object-position: center; /* keeps center visible */
+    display: block;
+}
+
+/* DARK OVERLAY */
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.2)
+    );
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: 0.3s;
+}
+
+/* TITLE */
+.project-overlay h3 {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* TEXT */
+.project-overlay p {
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* TAGS */
+.tags span {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+/* GITHUB */
+.project-overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* HOVER EFFECT 🔥 */
+.project-card:hover img {
+    transform: scale(1.08);
+    transition: 0.4s;
+}
+
+.project-overlay {
+    opacity: 0;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+.intro-video {
+    padding: 60px 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-video video {
+    width: 60%;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+/* MSD FULLSCREEN VIDEO */
+#msdIntro {
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#msdIntro video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* DEFAULT (DARK MODE) */
+body {
+    background: #0f0f0f;
+    color: #ffffff;
+}
+
+/* LIGHT MODE */
+body.light {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* FIX ABOUT TEXT */
+.about-box p {
+    color: inherit; /* auto adjust */
+}
+
+/* FIX STRONG (YOUR NAME) */
+.about-box strong {
+    color: inherit;
 }

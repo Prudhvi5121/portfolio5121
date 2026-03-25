@@ -75,6 +75,12 @@
     </style>
 </head>
 <body class="no-scroll">
+    <!-- MSD INTRO VIDEO -->
+<div id="msdIntro">
+    <video autoplay muted playsinline>
+    <source src="videos/dhoni.mp4" type="video/mp4">
+</video>
+</div>
 
 <div id="hello-screen">
 
@@ -114,6 +120,9 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact Me</a>
         <a href="https://drive.google.com/file/d/1AM8LSOKhlg4HkHuv_3UdwrkMSOpqKvC-/view" target="_blank" class="resume">View CV</a>
+         </a>
+    <!-- Theme Toggle -->
+    <button id="themeToggle">🌙</button>
     </nav>
 </header>
 
@@ -140,42 +149,75 @@
 
 <section class="projects" id="projects">
     <h2>Projects</h2>
+
     <div class="project-list">
-        
+
+        <!-- Project 1 -->
         <div class="project-card">
-            <h3>Resource Allocation System</h3>
-            <span class="tech">Java</span>
-            <p>Java Swing application that manages processes and displays CPU and memory usage in real time. Implemented add, remove, and optimize process features using core Java concepts.</p>
-            <a href="https://github.com/prudhvi5121" target="_blank">
-                GitHub <i class="fa-brands fa-github" style="margin-left:6px;"></i>
-            </a>
+            <img src="images/resource.png" alt="Resource Allocation System">
+
+            <div class="project-overlay">
+                <h3>Resource Allocation System</h3>
+                <p>Java Swing app that manages CPU & memory usage with process optimization.</p>
+                <div class="tags">
+                    <span>Java</span>
+                </div>
+                <a href="https://github.com/prudhvi5121" target="_blank">
+                    GitHub <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
 
+        <!-- Project 2 -->
         <div class="project-card">
-            <h3>AI Network Assistant</h3>
-            <span class="tech">HTML • CSS • JavaScript</span>
-            <p>Web-based networking assistant to help users troubleshoot network issues like DNS problems, Wi-Fi issues, and general connectivity errors.</p>
-            <a href="https://github.com/prudhvi5121" target="_blank">
-                GitHub <i class="fa-brands fa-github" style="margin-left:6px;"></i>
-            </a>
+            <img src="images/ai.png" alt="AI Network Assistant">
+            <div class="project-overlay">
+                <h3>AI Network Assistant</h3>
+                <p>Helps users troubleshoot DNS, Wi-Fi, and connectivity issues.</p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/prudhvi5121" target="_blank">
+                    GitHub <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
 
+        <!-- Project 3 -->
         <div class="project-card">
-            <h3>Responsive Website Development</h3>
-            <span class="tech">HTML • CSS • JavaScript</span>
-            <p>Designed a responsive food delivery website with clean UI, mobile-friendly layout, and interactive components.</p>
-            <a href="https://github.com/prudhvi5121" target="_blank">
-                GitHub <i class="fa-brands fa-github" style="margin-left:6px;"></i>
-            </a>
+            <img src="images/food.png" alt="Responsive Website">
+            <div class="project-overlay">
+                <h3>Responsive Website</h3>
+                <p>Food delivery UI with responsive design and interactive features.</p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+                <a href="https://github.com/prudhvi5121" target="_blank">
+                    GitHub <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
 
+        <!-- Project 4 -->
         <div class="project-card">
-            <h3>Student Portal System</h3>
-            <span class="tech">HTML • CSS • JavaScript • Backend</span>
-            <p>A web-based student portal system that manages student data, authentication, and academic information. Includes features like login system, dashboard, and efficient data handling for better user experience.</p>
-            <a href="https://github.com/Prudhvi5121/mystudent-portal-system" target="_blank">
-                GitHub <i class="fa-brands fa-github" style="margin-left:6px;"></i>
-            </a>
+            <img src="images/student.png" alt="Student Portal">
+            <div class="project-overlay">
+                <h3>Student Portal System</h3>
+                <p>Authentication, dashboard, and academic data management system.</p>
+                <div class="tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <a href="https://github.com/Prudhvi5121/mystudent-portal-system" target="_blank">
+                    GitHub <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
         </div>
 
     </div>
@@ -204,10 +246,35 @@
 <section class="skills" id="skills">
     <h2>Skills</h2>
     <div class="skills-hover">
-        <div class="skill-item"><h3>Languages</h3><div class="skill-popup">Java, C++, Python, DSA</div></div>
-        <div class="skill-item"><h3>Frameworks</h3><div class="skill-popup">HTML, CSS, JavaScript</div></div>
-        <div class="skill-item"><h3>Tools</h3><div class="skill-popup">GitHub, LeetCode, CodeTantra, Neo Platform</div></div>
-        <div class="skill-item"><h3>Soft Skills</h3><div class="skill-popup">Problem Solving, Adaptability, Leadership</div></div>
+        <div class="skill-item">
+    <h3>Languages</h3>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <div class="skill-popup skill-icons">
+        <i class="fa-brands fa-java"></i>
+        <i class="fa-solid fa-code"></i> <!-- C++ -->
+        <i class="fa-brands fa-python"></i>
+        <i class="fa-solid fa-diagram-project"></i> <!-- DSA -->
+    </div>
+</div>
+
+<div class="skill-item">
+    <h3>Frameworks</h3>
+    <div class="skill-popup skill-icons">
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+        <i class="fa-brands fa-js"></i>
+    </div>
+</div>
+
+<div class="skill-item">
+    <h3>Tools</h3>
+    <div class="skill-popup skill-icons">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-solid fa-code"></i> <!-- LeetCode -->
+        <i class="fa-solid fa-laptop-code"></i> <!-- CodeTantra -->
+        <i class="fa-solid fa-layer-group"></i> <!-- Neo -->
+    </div>
+</div><div class="skill-item"><h3>Soft Skills</h3><div class="skill-popup">Problem Solving, Adaptability, Leadership</div></div>
     </div>
 </section>
 
@@ -219,10 +286,11 @@
 <section class="certifications" id="certifications">
     <h2>Certifications</h2>
     <div class="edu-box">
-        <p>Java Programming – IAM Neo | <a href="#" target="_blank">View Certificate</a></p>
-        <p>Cloud Computing – NPTEL | <a href="#" target="_blank">View Certificate</a></p>
-        <p>Data Structures & Algorithms – IAM Neo | <a href="#" target="_blank">View Certificate</a></p>
-        <p>Responsive Web Design – freeCodeCamp | <a href="#" target="_blank">View Certificate</a></p>
+        <p>Oracle Cloud Infrastructure AI Foundations Associate – Oracle | <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=974313ABBF6D4A888C921D41717A858576B49882FAF6E23A4BE51AFA93EFB80A">View Certificate</a></p>
+        <p>Cloud Computing – NPTEL | <a href="https://www.nptel.ac.in/courses/106/106/106106102/">View Certificate</a></p>
+        <p>Data Structures & Algorithms – IAM Neo | <a href="https://lpucolab438.examly.io/certificates">View Certificate</a></p>
+        <p>Claude with the Anthropic API – Anthropic | <a href="https://verify.skilljar.com/c/wr8a9ckiww5n">View Certificate</a></p>
+        <p>Responsive Web Design – freeCodeCamp | <a href="https://www.freecodecamp.org/certification/fcc6575cc66-dc23-40ed-8e70-5e78d281bad8/responsive-web-design">View Certificate</a></p>
     </div>
 </section>
 
@@ -248,8 +316,8 @@
         
         <!-- Bottom CV Buttons -->
         <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center;">
-            <a href="https://drive.google.com/file/d/1AM8LSOKhlg4HkHuv_3UdwrkMSOpqKvC-/view" target="_blank" style="text-decoration: none; padding: 10px 20px; border: 1px solid currentColor; border-radius: 4px;">View CV</a>
-            <a href="https://drive.google.com/uc?export=download&id=1AM8LSOKhlg4HkHuv_3UdwrkMSOpqKvC-" target="_blank" style="text-decoration: none; padding: 10px 20px; border: 1px solid currentColor; border-radius: 4px;">Download CV</a>
+            <a href="https://drive.google.com/file/d/1AM8LSOKhlg4HkHuv_3UdwrkMSOpqKvC-/view" target="_blank" class="cv-btn">View CV</a>
+            <a href="https://drive.google.com/uc?export=download&id=1AM8LSOKhlg4HkHuv_3UdwrkMSOpqKvC-" target="_blank" class="cv-btn">Download CV</a>
         </div>
     </div>
 </section>
@@ -362,7 +430,7 @@ async function run() {
     }, FINAL_FADE + 50);
 }
 
-run();
+setTimeout(run, 5000);
 })();
 </script>
 <script>
@@ -393,5 +461,60 @@ updateDateTime();
 <footer style="text-align:center; padding:20px; font-size:14px; color:#888;">
     © 2026 Prudhvi. All rights reserved.
 </footer>
+<script>
+const toggleBtn = document.getElementById("themeToggle");
+
+toggleBtn.addEventListener("click", (e) => {
+
+    // Button center position
+    const rect = toggleBtn.getBoundingClientRect();
+    const x = rect.left + rect.width / 2;
+    const y = rect.top + rect.height / 2;
+
+    // Create circle
+    const circle = document.createElement("span");
+    circle.classList.add("theme-circle");
+
+    circle.style.left = x + "px";
+    circle.style.top = y + "px";
+
+    // Set color BEFORE toggle
+    const isLight = document.body.classList.contains("light-mode");
+
+    if (isLight) {
+        circle.style.background = "#0f0f0f"; // going to dark
+    } else {
+        circle.style.background = "#ffffff"; // going to light
+    }
+
+    document.body.appendChild(circle);
+
+    // Toggle AFTER animation starts
+    setTimeout(() => {
+        document.body.classList.toggle("light-mode");
+
+        toggleBtn.textContent = document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+    }, 300);
+
+    // Remove circle
+    setTimeout(() => {
+        circle.remove();
+    }, 700);
+});
+</script>
+<script>
+const msdIntro = document.getElementById("msdIntro");
+const msdVideo = msdIntro.querySelector("video");
+
+// After video ends → show hello screen
+msdVideo.onended = () => {
+    msdIntro.style.display = "none";
+};
+
+// Backup: if autoplay blocked
+setTimeout(() => {
+    msdIntro.style.display = "none";
+}, 5000);
+</script>
 </body>
 </html>
